@@ -10,7 +10,8 @@ function Cart({ cart }) {
       {cart.length ? (
         cart.map((item) => <CartItem key={item.id} itemData={item} />)
       ) : (
-        <h1>Cart is Empty</h1>
+       
+        <img src="https://i.pinimg.com/736x/2e/ac/fa/2eacfa305d7715bdcd86bb4956209038--android.jpg" alt="cart_empty" />
       )}
     </div>
   );
@@ -18,6 +19,7 @@ function Cart({ cart }) {
 
 const mapStateToProps = (state) => {
   return {
+    // cart: state.shop.cart,
     cart: state.shop.cart,
   };
 };

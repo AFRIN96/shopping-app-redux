@@ -1,10 +1,11 @@
 .product_image{
-    margin: 50px;
-    width: 300px;
-    height: 300px;
+    margin: 20px;
+    width: 250px;
+    height: 200px;
+    padding-left: 41px;
 }
 .product_button{
-    background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)";
+    background: linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%);
     border-radius: 3;
     border: 0;
     color: red;
@@ -12,3 +13,34 @@
     padding: "0 30px";
     box-shadow: "0 3px 5px 2px rgba(255, 105, 135, .3)";
 }
+.heart{
+   font-size: 35px;
+   color:rgb(20, 32, 206);
+   margin-top: 7px;
+    width: 70px;
+    outline: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: bold;
+ } :hover{
+        color: rgb(192, 39, 39);
+    }
+   .active {
+    color: blueviolet;
+   }
+
+   .root{
+    height: 400px;
+    width: 600px;
+    margin: 20px;
+    box-shadow: 10px 20px 20px 10px0 #a3181f;
+    /* background-color: rgb(235, 216, 10);   */
+    background-color: yellow;  
+    display: grid;
+   }
+   .media{
+    height: 200px;
+   }
+   .content{
+    color: rgb(27, 141, 194);
+   }

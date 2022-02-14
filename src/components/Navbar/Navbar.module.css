@@ -1,20 +1,24 @@
 .navbar {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  padding: 0px;
   background: #6dedd5;
   position: sticky;
-  top: 0px;
-  left: 0;
   /* margin: 10px; */
-  height: 50px;
+  height: 60px;
   }
   .navbar__logo {
     font-size: 30px;
     font-weight: bold;
     color: #551a8b;
+    background: #fff;
+    width: 190px;
+    border: none;
+    border-radius: 15px;
+    height: 45px;
+    text-decoration: none;
+    
   }
   .navbar__cart {
     background: #fff;
@@ -39,4 +43,20 @@
     font-size: 30px;
     font-weight: bold;
     color: var(--dark-color);
+  }
+  .navbar__wishlist{
+    background: #fff;
+    width: 150px;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem;
+    cursor: pointer;
+    height: 30px;
+    color: indigo;
+  }
+  .link{
+    text-decoration: none;
   }

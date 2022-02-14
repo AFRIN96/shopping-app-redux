@@ -5,7 +5,6 @@ import SearchIcon from "@material-ui/icons/Search";
 import Product from "../Product/Product";
 import shopData from "../shopData.json";
 
-
 function SearchBar({ data }) {
   const [filterItems, setFilterItems] = useState([]);
   const handleFilter = (e) => {
@@ -20,16 +19,21 @@ function SearchBar({ data }) {
     }
   };
   return (
+    <React.Fragment>
     <form>
       <input type="text" placeholder="Search" onChange={handleFilter} />
       <SearchIcon />
-      {filterItems.length !==0 ? filterItems.map((prod) => (
+    </form>
+    <div className="container dashboard_items">
+    
+      { filterItems.length !==0 ? filterItems.map((prod) => (
         <Product key={prod.id} productsData={prod} />
       )): 
         shopData.map((prod) => (
         <Product key={prod.id} productsData={prod} />
       )) }
-    </form>
+      </div>
+    </React.Fragment>
     
   );
    

@@ -5,12 +5,13 @@ import WishlistItem from "./WishlistItem/WishlistItem";
 function Wishlist({ wishlist }) {
   console.log("wishlist", wishlist);
   return (
-    <div>
+    <div className="wishlist_items">
       {wishlist.length ? (
         wishlist.map((item) => <WishlistItem key={item.id} itemData={item} />)
       ) : (
         <img
-          src="https://dial2decor.com/images/no_wish_list.png"
+        className="wishlist_empty"
+          src="https://i.pinimg.com/originals/f6/e4/64/f6e464230662e7fa4c6a4afb92631aed.png"
           alt="wishlist_empty"
         />
       )}

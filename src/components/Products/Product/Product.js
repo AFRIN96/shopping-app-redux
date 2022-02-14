@@ -21,24 +21,31 @@ import Grid from "@material-ui/core/Grid";
 const useStyles = makeStyles({
   root: {
     // maxWidth: 345,
+    flexDirection : "row",
     backgroundColor: '#e5fcfb',
     height: 300,
     width: 400,
     margin: 20,
+   
     '&:hover': {
       boxShadow: "0 6px 12px 0",
     },
+    
   },
   
   media: {
     height: 100,
+  
   },
   content: {
-    padding: 20,
+    padding: 10,
     color: "#fff",
     marginBottom:10,
     marginLeft:50,
     fontSize : 20,
+  },
+  buttons:{
+    paddingLeft :40,
   },
 });
 
@@ -46,8 +53,6 @@ function Product({ productsData, addToCart, addToWishlist }) {
   const classes = useStyles();
 
   return (
-    <Box>
-      <Grid container spacing={2} item xs={8}>
         <Card className={classes.root}>
           <CardActionArea>
             <CardMedia className={classes.media}>
@@ -62,15 +67,13 @@ function Product({ productsData, addToCart, addToWishlist }) {
               <p>Price: Rs.{productsData.price}</p>
             </CardContent>
           </CardActionArea>
-          <CardActions>
-            <Button color="secondary" onClick={() => addToCart(productsData.id)}>
+          <CardActions className={classes.buttons}>
+            <Button className={styles.product_button} color="secondary" onClick={() => addToCart(productsData.id)}>
               Add
             </Button>
-            <RiHeartFill onClick={() => addToWishlist(productsData.id) }/>
+            <RiHeartFill className={styles.wishlist_icon} onClick={() => addToWishlist(productsData.id) }/>
           </CardActions>
         </Card>
-      </Grid>
-    </Box>
   );
 }
 

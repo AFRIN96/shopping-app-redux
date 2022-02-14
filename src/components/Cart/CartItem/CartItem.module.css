@@ -9,9 +9,15 @@
     border: 0;
     color: red;
     height: 48;
-    padding: 0 30px;
+    padding: 30px;
     box-shadow: 0 3px 5px 2px rgba(255, 105, 135, .3);
 }
 .product_qty{
 
+background: linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%);
+text-align: center;
+width:10px;
+}
+.qty{
+    padding-right: 35px;
 }

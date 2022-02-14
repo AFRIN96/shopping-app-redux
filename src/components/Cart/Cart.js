@@ -6,12 +6,11 @@ function Cart({ cart }) {
   console.log("Cart", cart);
 
   return (
-    <div>
+    <div className="cart_items">
       {cart.length ? (
         cart.map((item) => <CartItem key={item.id} itemData={item} />)
       ) : (
-       
-        <img src="https://i.pinimg.com/736x/2e/ac/fa/2eacfa305d7715bdcd86bb4956209038--android.jpg" alt="cart_empty" />
+        <img src="https://freshcity.co.nz/_resources/themes/option1/images/shopping_cart_empty.jpg" className="cartempty_image" alt="cart_empty" />
       )}
     </div>
   );

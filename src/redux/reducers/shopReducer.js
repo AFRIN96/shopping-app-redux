@@ -1,5 +1,6 @@
 import * as actionTypes from "../actions/action.types";
 import shopData from "../../components/Products/shopData.json";
+import { red } from "@material-ui/core/colors";
 
 const initialState = {
   cart: [],
@@ -84,7 +85,7 @@ const shopReducer = (state = initialState, action) => {
           ? state.wishlist.map((items) =>
               items.id === action.payload.id ? { ...items } : items
             )
-          : [...state.wishlist, { ...items }],
+          : [...state.wishlist, { ...items , color: red }],
       };
     case actionTypes.DELETE_FROM_WISHLIST:
       return {

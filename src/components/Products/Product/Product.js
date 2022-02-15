@@ -22,7 +22,8 @@ const useStyles = makeStyles({
   root: {
     // maxWidth: 345,
     flexDirection : "row",
-    backgroundColor: '#e5fcfb',
+    // backgroundColor: '#e5fcfb',
+    backgroundColor: "linear-gradient(45deg, #6dedd5 30%, #ffffff 90%)",
     height: 300,
     width: 400,
     margin: 20,
@@ -68,10 +69,12 @@ function Product({ productsData, addToCart, addToWishlist }) {
             </CardContent>
           </CardActionArea>
           <CardActions className={classes.buttons}>
-            <Button className={styles.product_button} color="secondary" onClick={() => addToCart(productsData.id)}>
-              Add
+            <Button className={styles.product_button} color="secondary" onClick={ () => addToCart(productsData.id)}>
+              Add To <img className={styles.addcart__image}
+              src="https://cdn-icons-png.flaticon.com/512/3081/3081840.png"
+              alt="cart" />
             </Button>
-            <RiHeartFill className={styles.wishlist_icon} onClick={() => addToWishlist(productsData.id) }/>
+            <RiHeartFill className={styles.wishlist_icon} onClick={() => addToWishlist(productsData.id)}/>
           </CardActions>
         </Card>
   );

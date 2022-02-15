@@ -21,3 +21,9 @@ width:10px;
 .qty{
     padding-right: 35px;
 }
+.cart_items{
+    display: flex;
+}
+.wishlist_items {
+    display: flex;
+ }

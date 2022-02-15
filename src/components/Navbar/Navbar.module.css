@@ -18,7 +18,7 @@
     border-radius: 15px;
     height: 45px;
     text-decoration: none;
-    
+    z-index: 1;
   }
   .navbar__cart {
     background: #fff;
@@ -59,4 +59,6 @@
   }
   .link{
     text-decoration: none;
+   
+    /* background-color: darksalmon; */
   }

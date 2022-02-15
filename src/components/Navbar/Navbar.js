@@ -48,11 +48,6 @@ const Navbar = () => {
           />
         </div>
       </Link>
-      <Link to="/search" className={styles.link}>
-        <div className={styles.navbar__cart}>
-          <h3 className={styles.cart__title}>Search</h3>
-        </div>
-      </Link>
 
    {/*    <div className={styles.navbar__cart}>
         <form>

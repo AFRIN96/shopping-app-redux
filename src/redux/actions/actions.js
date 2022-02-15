@@ -25,15 +25,6 @@ export const searchBar = (itemId, e) => {
   };
 };
 
-// export const addToWishlist = (itemId) => {
-//   return {
-//     type: actionTypes.ADD_TO_WISHLIST,
-//     payLoad: {
-//       id: itemId,
-//     },
-//   };
-// };
-
 export const addToWishlist = (itemId) => {
   return {
     type: actionTypes.ADD_TO_WISHLIST,
@@ -42,14 +33,7 @@ export const addToWishlist = (itemId) => {
     },
   };
 };
-// export const deleteFromWishlist = (itemId) => {
-//   return {
-//     type: actionTypes.DELETE_FROM_WISHLIST,
-//     payLoad: {
-//       id: itemId,
-//     },
-//   };
-// };
+
 export const deleteFromWishlist = (itemId) => {
   return {
     type: actionTypes.DELETE_FROM_WISHLIST,

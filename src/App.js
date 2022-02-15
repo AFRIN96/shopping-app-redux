@@ -12,9 +12,8 @@ function App() {
         <Navbar />
         <Routes className="App-header">
           <Route exact path="/" element={<Products />} />
-          <Route exaact path="/cart" element={<Cart />} />
-          <Route exaact path="/wishlist" element={<Wishlist />} />
-          <Route exaact path="/search" element={<SearchBar />} />
+          <Route exact path="/cart" element={<Cart />} />
+          <Route exact path="/wishlist" element={<Wishlist />} />
         </Routes>
       </div>
     </Router>

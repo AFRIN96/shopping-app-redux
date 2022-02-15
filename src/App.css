@@ -53,13 +53,22 @@
 }
 .wishlist_empty {
   margin: auto;
-  width: 40%;
-  height: 350px;
+  width: 700px;
+  height: 450px;
   padding: 20px;
 }
 .cartempty_image {
   margin: auto;
-  width: 50%;
-  height: 500px;
+  width: 700px;
+  height: 450px;
   padding: 20px;
+}
+.search_box{
+  width: 190px;
+    height: 30px;
+    border-radius: 10px;
+    margin: 10px;
+}
+.search_icon{
+ 
 }

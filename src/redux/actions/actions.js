@@ -9,7 +9,7 @@ export const addToCart = (itemId) => {
 };
 export const deleteFromCart = (itemId) => {
   return {
-    type: actionTypes.DELETE_FROM_CART,
+    type: "DELETE_FROM_CART",
     payload: {
       id: itemId,
     },
@@ -42,12 +42,30 @@ export const deleteFromWishlist = (itemId) => {
     },
   };
 };
-export const adjustQty = (itemId,value )=>{
-  return{
+export const adjustQty = (itemId, value) => {
+  return {
     type: actionTypes.ADJUST_QUANTITY,
-    payload:{
-      id : itemId,
+    payload: {
+      id: itemId,
       qty: value,
-    }
-  }
-}
+    },
+  };
+};
+export const incrementQty = (itemId, value) => {
+  return {
+    type: actionTypes.INCREMENT_QUANTITY,
+    payload: {
+      id: itemId,
+      qty: value,
+    },
+  };
+};
+export const decrementQty = (itemId, value) => {
+  return {
+    type: actionTypes.DECREMENT_QUANTITY,
+    payload: {
+      id: itemId,
+      qty: value,
+    },
+  };
+};

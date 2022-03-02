@@ -45,6 +45,7 @@ const useStyles = makeStyles({
 function WishlistItem({ itemData, deleteFromWishlist }) {
   const classes = useStyles();
 
+  
     console.log("itemDatainwishlist", itemData);
 
   return(

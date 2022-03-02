@@ -3,6 +3,7 @@ import CartItem from "./CartItem/CartItem";
 import { connect } from "react-redux";
 import SearchBar from "../Cart/SearchBar/SearchBar";
 import shopData from "../Products/shopData.json";
+import SearchbarCart from "../Cart/SearchBar/SearchbarCart";
 
 function Cart({ cart }) {
   console.log("Cart", cart);
@@ -10,8 +11,11 @@ function Cart({ cart }) {
   return (
     <div>
 
+    {/* 
     <SearchBar data={shopData} cart={cart}/>
-      
+  */} 
+  <SearchbarCart data={shopData} cart={cart}/>
+     
     </div>
   );
 }

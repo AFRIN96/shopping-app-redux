@@ -3,19 +3,22 @@
       "id": 1,
       "image": "https://media.cntraveler.com/photos/546976f2cbbd2620680d9f2f/master/pass/rare-fruits-tout.jpg",
       "price": 30,
-      "name": "Lichi"
+      "name": "Lichi",
+      "code": "PROD1"
     },
     {
         "id": 2,
         "image": "https://images.everydayhealth.com/images/ordinary-fruits-with-amazing-health-benefits-05-1440x810.jpg",
         "price": 40,
-        "name": "Strawberry"
+        "name": "Strawberry",
+        "code": "PROD2"
     },
     {
         "id": 3,
         "image": "https://cdn-prod.medicalnewstoday.com/content/images/articles/324/324431/healthiest-fruits-lemons.jpg",
         "price": 20,
-        "name": "Lemon"
+        "name": "Lemon",
+        "code": "PROD3"
     }
 
 ]

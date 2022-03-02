@@ -7,20 +7,10 @@
   position: sticky;
   /* margin: 10px; */
   height: 60px;
+  text-decoration: none;
+ 
   }
-  .navbar__logo {
-    font-size: 30px;
-    font-weight: bold;
-    color: #551a8b;
-    background: #fff;
-    width: 190px;
-    border: none;
-    border-radius: 15px;
-    height: 45px;
-    text-decoration: none;
-    z-index: 1;
-  }
-  .navbar__cart {
+  .navbar__dashboard {
     background: #fff;
     width: 124px;
     border: none;
@@ -32,11 +22,29 @@
     cursor: pointer;
     height: 30px;
     color: indigo;
+    text-decoration: none;
+  }
+  .navbar__cart {
+    background: #fff;
+    width: 157px;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem;
+    cursor: pointer;
+    height: 30px;
+    color: indigo;
+    text-decoration: none;
+
   }
   .cart__image {
-    width: 30px;
+    width: 33px;
     height: 30px;
-    object-fit: contain;
+    object-fit: cover;
+    margin-bottom: -5px;
+
   }
   
 .cart__title {
@@ -56,9 +64,14 @@
     cursor: pointer;
     height: 30px;
     color: indigo;
-  }
-  .link{
     text-decoration: none;
-   
-    /* background-color: darksalmon; */
+
   }
+  /* .nav-link{
+    text-decoration: none;
+  }
+  .active{
+    text-decoration: none;
+    background: rgb(201, 62, 62);
+ 
+  } */

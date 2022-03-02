@@ -3,7 +3,7 @@
   background-image: url("https://media.istockphoto.com/photos/abstract-multi-colored-bokeh-background-lights-at-night-autumn-fall-picture-id1182650732?b=1&k=20&m=1182650732&s=170667a&w=0&h=5LphKncEWNAHpwTXphq9gi0Ix5aDHk22eXgKvtuWR8o=");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 130vh;
   background-position: center;
   text-decoration: none;
 }
@@ -71,4 +71,26 @@
 }
 .search_icon{
  
+}
+.nav-link{
+  text-decoration: none;
+}
+.active{
+  /* background: rgb(219, 80, 80); */
+  /* background: rgb(192, 125, 145); */
+  /* background: #403f83; */
+  /* background: linear-gradient(45deg, #ed6dcd 30%, #fef0ff 90%); */
+  background: linear-gradient(43deg, #fe82a2 33%, #0dc3b24d 64%);
+
+  width: 124px;
+  border: none;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem;
+  cursor: pointer;
+  height: 30px;
+  color: white;
+  text-decoration: none;
 }

@@ -1,12 +1,10 @@
-import React, {useState,useCallback} from "react";
+import React from "react";
 import styles from "./Product.module.css";
 // import { Button } from 'react-bootstrap';
 import { RiHeartFill } from "react-icons/ri";
-
 import { connect } from "react-redux";
 import { addToCart, addToWishlist } from "../../../redux/actions/actions";
 import {
-  Box,
   Button,
   Card,
   CardActionArea,
@@ -15,8 +13,7 @@ import {
   CardMedia,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-
-import Grid from "@material-ui/core/Grid";
+import FavouriteButton from "./FavouriteButton";
 
 const useStyles = makeStyles({
   root: {
@@ -71,10 +68,11 @@ function Product({ productsData, addToCart, addToWishlist }) {
           <CardActions className={classes.buttons}>
             <Button className={styles.product_button} color="secondary" onClick={ () => addToCart(productsData.id)}>
               Add To <img className={styles.addcart__image}
-              src="https://cdn-icons-png.flaticon.com/512/3081/3081840.png"
+              src="https://cdn-icons-png.flaticon.com/512/4290/4290854.png"
               alt="cart" />
             </Button>
-            <RiHeartFill className={styles.wishlist_icon} onClick={() => addToWishlist(productsData.id)}/>
+          {console.log(productsData,'productsData')}
+            <FavouriteButton productsData={productsData}  onClick={()=> console.log("clicked")}/>
           </CardActions>
         </Card>
   );

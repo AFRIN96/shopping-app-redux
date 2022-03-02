@@ -8,7 +8,10 @@ function SearchBar({ data }) {
   const handleFilter = (e) => {
     const searchItem = e.target.value;
     const newFilterItem = data.filter((value) => {
-      return value.name.toLowerCase().includes(searchItem.toLowerCase());
+      return  Object.values(value)
+      .join(" ")
+      .toLowerCase()
+      .includes(searchItem.toLowerCase());
     });
     if (searchItem === "") {
       setFilterItems([]);

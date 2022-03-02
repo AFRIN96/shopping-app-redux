@@ -34,46 +34,24 @@ const shopReducer = (state = initialState, action) => {
         ...state,
         cart: state.cart.map((item) =>
           item.id === action.payload.id
-            ? { ...item, qty: action.payload.qty }
+            ? { ...item, qty: +action.payload.qty }
             : item
         ),
       };
-    // case actionTypes.SEARCH_BAR:
-    //   const searchItem = action;
-    //   const newFilterItem = shopData.filter((value) => {
-    //     return value.name.toLowerCase().includes(searchItem.toLowerCase());
-    //   });
-    //   //   const {value} = action;
-    //   //   const cart = shopData.filter ((val)=> val.includes(value) )
-    //   //   return{
-    //   //     ...state, cart, value
-    //   // }
-    //   return { ...state.searchvalue, searchvalue: newFilterItem };
-
-    // case actionTypes.ADD_TO_WISHLIST:
-    //   const wishlistItem = shopData.find(
-    //     (prod) => prod.id === action.payload.id
-    //   );
-    //   const inWishlist = state.wishlist.find((wishlistItem) =>
-    //     wishlistItem.id === action.payload.id ? true : false
-    //   );
-    //   return {
-    //     ...state,
-    //     wishlist: inWishlist
-    //       ? state.wishlist.map((wishlistItem) =>
-    //           wishlistItem.id === action.payload.id
-    //             ? { ...wishlistItem }
-    //             : wishlistItem
-    //         )
-    //       : [...state.wishlist, { wishlistItem }],
-    //   };
-    // case actionTypes.DELETE_FROM_WISHLIST:
-    //   return {
-    //     ...state,
-    //     wishlist: state.wishlist.filter(
-    //       (wishlistItem) => wishlistItem.id !== action.payload.id
-    //     ),
-    //   };
+    case actionTypes.INCREMENT_QUANTITY:
+      return {
+        ...state,
+        cart: state.cart.map((item) =>
+          item.id === action.payload.id ? { ...item, qty: item.qty + 1 } : item
+        ),
+      };
+    case actionTypes.DECREMENT_QUANTITY:
+      return {
+        ...state,
+        cart: state.cart.map((item) =>
+          item.id === action.payload.id ? { ...item, qty: item.qty - 1 } : item
+        ),
+      };
     case actionTypes.ADD_TO_WISHLIST:
       const items = shopData.find((prods) => prods.id === action.payload.id);
       const inWishlist = state.wishlist.find((items) =>
@@ -85,7 +63,7 @@ const shopReducer = (state = initialState, action) => {
           ? state.wishlist.map((items) =>
               items.id === action.payload.id ? { ...items } : items
             )
-          : [...state.wishlist, { ...items , color: red }],
+          : [...state.wishlist, { ...items, color: red }],
       };
     case actionTypes.DELETE_FROM_WISHLIST:
       return {

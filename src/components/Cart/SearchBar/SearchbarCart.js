@@ -16,11 +16,11 @@ import {
   Paper,
 } from "@material-ui/core";
 import Quantity from "./Quantity";
-function SearchbarCart({ data, cart,deleteFromCart,adjustQty }) {
+function SearchbarCart({ data, cart, deleteFromCart, adjustQty }) {
   const [filterItems, setFilterItems] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [totalItems, setTotalItems] = useState(0);
- 
+
   useEffect(() => {
     let price = 0;
     let items = 0;
@@ -35,10 +35,10 @@ function SearchbarCart({ data, cart,deleteFromCart,adjustQty }) {
     const searchItem = e.target.value;
     const newFilterItem = cart.filter((value) => {
       return Object.values(value)
-      .join(" ")
+        .join(" ")
 
-      .toLowerCase()
-      .includes(searchItem.toLowerCase());
+        .toLowerCase()
+        .includes(searchItem.toLowerCase());
     });
     if (searchItem === "") {
       setFilterItems([]);
@@ -51,10 +51,10 @@ function SearchbarCart({ data, cart,deleteFromCart,adjustQty }) {
   if (cart.length === 0) {
     return (
       <img
-      src="https://www.kindpng.com/picc/m/174-1749396_empty-cart-your-cart-is-empty-hd-png.png"
-      className="cartempty_image"
-      alt="cart_empty"
-    />
+        src="https://www.kindpng.com/picc/m/174-1749396_empty-cart-your-cart-is-empty-hd-png.png"
+        className="cartempty_image"
+        alt="cart_empty"
+      />
     );
   }
   return (
@@ -75,56 +75,69 @@ function SearchbarCart({ data, cart,deleteFromCart,adjustQty }) {
           ))
         ) : (
           <>
-          <TableContainer component={Paper}>
-            <Table sx={{ minWidth: 700 }} aria-label="spanning table">
-              <TableHead>
-                <TableRow>
-                  <TableCell>Id</TableCell>
-                  <TableCell>Product Code</TableCell>
-                  <TableCell>Name</TableCell>
-                  <TableCell>Image</TableCell>
-                  <TableCell>Qty</TableCell>
-                  <TableCell>Price</TableCell>
-                  <TableCell>Actions</TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {cart.map((item) => {
-                  return (
-                    <TableRow key={item.id} style ={{ textAlign : "-webkit-math-parent"
-                    }}>
-                      <TableCell>{item.id}</TableCell>
-                      <TableCell>{item.code}</TableCell>
+            <TableContainer component={Paper}>
+              <Table sx={{ minWidth: 600 }} aria-label="spanning table">
+                <TableHead>
+                  <TableRow>
+                    <TableCell>Id</TableCell>
+                    <TableCell>Product Code</TableCell>
+                    <TableCell>Name</TableCell>
+                    <TableCell>Image</TableCell>
+                    <TableCell>Qty</TableCell>
+                    <TableCell>Price</TableCell>
+                    <TableCell>Actions</TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {cart.map((item) => {
+                    return (
+                      <TableRow
+                        key={item.id}
+                        style={{ textAlign: "-webkit-math-parent" }}
+                      >
+                        <TableCell>{item.id}</TableCell>
+                        <TableCell>{item.code}</TableCell>
 
-                      <TableCell>{item.name}</TableCell>
-                      <TableCell>
-                        <img
-                          className={styles.product_image}
-                          src={item.image}
-                          alt={item.name}
-                        />
-                      </TableCell>
-                      <TableCell>
-                        <Quantity itemData={item} />
-                      </TableCell>
-                      <TableCell>{item.price}</TableCell>
-                      <TableCell>
-                        <Button
-                          className={styles.product_button}
-                          color="secondary"
-                          onClick={() => deleteFromCart(item.id)}
-                        >
-                          Delete
-                        </Button>
-                      </TableCell>
-                    </TableRow>
-                  );
-                })}
-              
-              </TableBody>
-            </Table>
-          </TableContainer>
-          <Card style={{ width: 200 , height: 50, padding: 10 , margin: 10 }}>Total({totalItems} items): Rs.{totalPrice}</Card>
+                        <TableCell>{item.name}</TableCell>
+                        <TableCell>
+                          <img
+                            className={styles.product_image}
+                            src={item.image}
+                            alt={item.name}
+                          />
+                        </TableCell>
+                        <TableCell>
+                          <Quantity itemData={item} />
+                        </TableCell>
+                        <TableCell>{item.price}</TableCell>
+                        <TableCell>
+                          <Button
+                            className={styles.product_button}
+                            color="secondary"
+                            onClick={() => deleteFromCart(item.id)}
+                          >
+                            Delete
+                          </Button>
+                        </TableCell>
+                      </TableRow>
+                    );
+                  })}
+                </TableBody>
+              </Table>
+              <Card
+                style={{
+                  width: 200,
+                  height: 50,
+                  padding: 10,
+                  marginLeft: 1000,
+                  background: "darkseagreen",
+                  fontSize: "larger",
+                  color: "floralwhite",
+                }}
+              >
+                Total({totalItems} items): Rs.{totalPrice}
+              </Card>
+            </TableContainer>
           </>
         )}
 

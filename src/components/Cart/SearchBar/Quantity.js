@@ -16,12 +16,14 @@ function Quantity({itemData,adjustQty,incrementQty,decrementQty}) {
     }
     const decrement = (e)=>{
       setInput(e.target.value);
+      if(itemData.qty > 0){
       decrementQty(itemData.id, e.target.value)
+      }
     }
   return (
     <div style={{display : "flex" }}>
 <img src="https://cdn-icons-png.flaticon.com/512/1053/1053155.png" alt="plus" style ={{width : 30 ,height: 30}} onClick={increment}/>
-<Card  style ={{width : 50 ,height: 30 , display : "flex"}} >{itemData.qty}</Card>
+<Card  style ={{width : 50 ,height: 30 , display : "flex" , alignItems :"right"}} >{itemData.qty}</Card>
 <img src="https://cdn-icons-png.flaticon.com/512/1053/1053167.png" alt="minus" style ={{width : 30 ,height: 30}} onClick={decrement}/>
   </div>    
   )
